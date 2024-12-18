@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(
+    to bottom,
+    rgb(251, 250, 205) 24.4%,
+    rgb(247, 163, 205) 53.7%,
+    rgb(141, 66, 243) 99.2%
+  );
+  background-attachment: fixed;
+  font-family: "Roboto Flex", serif;
+}
+.main-body {
+  background: #bae5d5;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  padding: 50px;
+  border-radius: 10px;
+}
