@@ -1,9 +1,11 @@
 function refreshWeather(response) {
-  
+  let temperatureElement = document.querySelector("#current-temperature");
+  let temperature = response.data.temperature.current;
+  let currentCityElement = document.querySelector("#current-city");
+
+  currentCityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = Math.round(temperature);
 }
-
-
-
 
 function searchCity(city) {
   let apiKey = "5912o91beb33d634bfd91ta0a18fa0bd";
@@ -14,10 +16,10 @@ function searchCity(city) {
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
-  let currentCityElement = document.querySelector("#current-city");
-  currentCityElement.innerHTML = searchInput.value;
+
   searchCity(searchInput.value);
 }
 
 let searchFormElement = document.querySelector(".search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+searchCity("Brantford");
