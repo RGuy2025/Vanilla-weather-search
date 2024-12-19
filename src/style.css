@@ -10,12 +10,12 @@ body {
 }
 .main-body {
   background: #bae5d5;
+  background-position: center;
   max-width: 600px;
   margin: 100px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   padding: 50px 50px 25px 50px;
   border-radius: 10px;
-  background-position: fixed;
 }
 header {
   border-bottom: 1px solid #bae5d5;
