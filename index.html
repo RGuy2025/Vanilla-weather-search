@@ -16,14 +16,14 @@
   <div class="main-body">
     <header>
       <form class="search-form">
-        <input type="search" placeholder="Enter a city" required class="search-form-input" />
+        <input type="search" placeholder="Enter a city" required id="search-input" class="search-form-input" />
         <input type="submit" value="Search" class="search-form-button" />
       </form>
     </header>
     <main>
       <div class="weather-app-data">
         <div>
-          <h1 class="weather-app-city">Vanilla</h1>
+          <h1 class="weather-app-city" id="current-city">Vanilla</h1>
           <p class="weather-app-details">
             <span class="current-day">Wednesday</span><span class="current-time">13:10</span>, <span
               class="current-condition"> cloudy</span>
@@ -46,7 +46,8 @@
       hosted on <a href="https://vanilla-weather-search-2024.netlify.app/" target="_blank"> Netlify</a>.
     </footer>
   </div>
+  <script src="src/app.js"></script>
 </body>
-<script src="app.js"></script>
+
 
 </html>
