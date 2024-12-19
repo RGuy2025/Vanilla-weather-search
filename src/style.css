@@ -10,7 +10,7 @@ body {
 }
 .main-body {
   background: #bae5d5;
-  background-position: fixed;
+
   max-width: 600px;
   margin: 100px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
