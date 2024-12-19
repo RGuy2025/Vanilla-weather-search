@@ -15,6 +15,7 @@ body {
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   padding: 50px 50px 25px 50px;
   border-radius: 10px;
+  position: relative;
 }
 header {
   border-bottom: 1px solid #bae5d5;
@@ -71,10 +72,8 @@ main {
 .weather-app-icon {
   height: 100px;
   width: 100px;
-  
 }
 .weather-app-temperature {
-
   font-size: 100px;
   font-weight: bold;
   margin-left: 15px;
