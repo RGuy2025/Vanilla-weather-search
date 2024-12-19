@@ -69,10 +69,12 @@ main {
   display: flex;
 }
 .weather-app-icon {
-  font-size: 50px;
-  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  
 }
 .weather-app-temperature {
+
   font-size: 100px;
   font-weight: bold;
   margin-left: 15px;

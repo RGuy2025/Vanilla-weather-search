@@ -10,6 +10,7 @@ function refreshWeather(response) {
   let dayElement = document.querySelector("#current-day");
   let timeElement = document.querySelector("#current-time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#current-weather-icon");
 
   currentCityElement.innerHTML = response.data.city;
   dayElement.innerHTML = formatDay(date);
@@ -18,6 +19,9 @@ function refreshWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
+  iconElement.innerHTML = `<img
+      src="${response.data.condition.icon_url}" class= "weather-app-icon"
+    />`;
 }
 function formatTime(date) {
   let minutes = date.getMinutes();
