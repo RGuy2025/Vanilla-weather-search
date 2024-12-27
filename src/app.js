@@ -22,6 +22,7 @@ function refreshWeather(response) {
   iconElement.innerHTML = `<img
       src="${response.data.condition.icon_url}" class= "weather-app-icon"
     />`;
+  getForecast(response.data.city);
 }
 function formatTime(date) {
   let minutes = date.getMinutes();
@@ -57,15 +58,14 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
-function displayForecast() {
-  let days = [
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    
-  ];
+function getForecast(city) {
+  let apiKey = "5912o91beb33d634bfd91ta0a18fa0bd";
+  let apiForecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}}&key=${apiKey}&units=metric`;
+  axios(apiForecastUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let forecastHtml = "";
   days.forEach(function (day) {
     forecastHtml =
@@ -88,4 +88,3 @@ function displayForecast() {
 let searchFormElement = document.querySelector(".search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Brantford");
-displayForecast();
